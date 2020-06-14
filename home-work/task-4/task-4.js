@@ -10,10 +10,10 @@ const spanValue = document.querySelector('#value');
 
 buttonIncrement.addEventListener('click', e => {
   counterValue += 1;
-  return (spanValue.textContent = counterValue);
+  spanValue.textContent = counterValue;
 });
 
 buttonDecrement.addEventListener('click', e => {
   counterValue -= 1;
-  return (spanValue.textContent = counterValue);
+  spanValue.textContent = counterValue;
 });

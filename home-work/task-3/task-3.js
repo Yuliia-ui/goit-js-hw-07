@@ -17,9 +17,11 @@ const images = [
 ];
 
 const listRef = document.querySelector('#gallery');
-let list = '';
+const listImage = images
+  .map(
+    image =>
+      `<li><img src=${image.url} alt=${image.alt} width='200px'></img></li>`,
+  )
+  .join('');
 
-images.forEach(image => {
-  list = `<li><img src="${image.url}" alt="${image.alt}" width='200px'<li>`;
-  listRef.insertAdjacentHTML('beforeend', list);
-});
+listRef.insertAdjacentHTML('beforeend', listImage);
